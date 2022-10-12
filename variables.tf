@@ -1,3 +1,7 @@
+#----------------------------------------------------------------
+#                       VPC Variables                           #
+#----------------------------------------------------------------
+
 variable "vpc_cidr_block" {
   description = "Please provide CIDR address to create a new VPC"
 
@@ -23,4 +27,28 @@ variable "rt_name" {
 }
 variable "sg_name" {
   description = "Please provide security group name"
+}
+
+
+#----------------------------------------------------------------
+#                       EC2 Variables                           #
+#----------------------------------------------------------------
+
+variable "ami" {
+  description = "Please provide only Linux AMI"
+}
+variable "instance_type" {
+  description = "please provide instance type"
+}
+
+variable "key_pair" {
+  description = "please provide keypair name"
+}
+
+variable "iam_role" {
+  description = "please provide iam role name"
+}
+
+variable "instance_name" {
+  description = "please provide instance name"
 }
