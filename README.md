@@ -16,7 +16,7 @@ module "vpc" {
 To create a vpc & ec2 instance, please use below code
 
 module "vpc" {
-    source = "git::https://github.com/mskrishna2808/vpc-ec2-module.git?ref=1.0.0"
+    source = "git::https://github.com/mskrishna2808/vpc-ec2-module.git?ref=2.0.0"
 
     vpc_cidr_block = "10.10.0.0/16"
     subnet_cidr_block = "10.10.0.0/17"
