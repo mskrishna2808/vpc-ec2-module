@@ -1,5 +1,9 @@
+# VPC & EC2 Terraform Module
+
+## VPC Creation
 To create a vpc in aws, please use below code
 
+```hcl
 module "vpc" {
     source = "git::https://github.com/mskrishna2808/vpc-ec2-module.git?ref=1.0.0"
 
@@ -12,9 +16,12 @@ module "vpc" {
     sg_name = "module-sg"
  
 }
+```
+## VPC & EC2 Creation
 
-To create a vpc & ec2 instance, please use below code
+To create a vpc & ec2 instance, please use below terraform code
 
+```hcl
 module "vpc" {
     source = "git::https://github.com/mskrishna2808/vpc-ec2-module.git?ref=2.0.0"
 
@@ -31,13 +38,14 @@ module "vpc" {
     key_pair = "lab_keypair"
     iam_role = "IamInstanceRole"
     instance_name = "terraform-instance"
-  
 }
+```
 
 To see the outputs of ec2 instance follow the below instructions.
 1. Please create a file called outputs.tf
 2. Copy the below content into outputs.tf
 
+```hcl
 output "instance_dns_name" {
   value = module.vpc.instance_dns_name
 }
@@ -45,5 +53,5 @@ output "instance_dns_name" {
 output "instance_ip" {
   value = module.vpc.instance_ip
 }
-
+```
 
